@@ -1,0 +1,8 @@
+{
+  "language": "java",
+  "script": "mvn clean package",
+  "jdk": "oraclejdk8",
+  "group": "stable",
+  "dist": "precise",
+  "os": "linux"
+}
