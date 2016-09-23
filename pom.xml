@@ -156,24 +156,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<plugin>
-						<groupId>org.eluder.coveralls</groupId>
-						<artifactId>coveralls-maven-plugin</artifactId>
-						<version>${coveralls-maven-plugin.version}</version>
-						<configuration>
-							<repoToken>${COVERALLS_REPO_TOKEN}</repoToken>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>cobertura-maven-plugin</artifactId>
-						<version>${cobertura-maven-plugin.version}</version>
-						<configuration>
-							<format>xml</format>
-							<maxmem>256m</maxmem>
-							<aggregate>true</aggregate>
-						</configuration>
-					</plugin>
 				</plugins>
 			</build>
 		</profile>
@@ -199,6 +181,24 @@
 						<releaseBranchPrefix>release/</releaseBranchPrefix>
 						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
 					</flowInitContext>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>${coveralls-maven-plugin.version}</version>
+				<configuration>
+					<repoToken>${COVERALLS_REPO_TOKEN}</repoToken>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>${cobertura-maven-plugin.version}</version>
+				<configuration>
+					<format>xml</format>
+					<maxmem>256m</maxmem>
+					<aggregate>true</aggregate>
 				</configuration>
 			</plugin>
 		</plugins>
