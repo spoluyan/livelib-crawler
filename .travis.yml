@@ -1,8 +1,8 @@
-{
-  "language": "java",
-  "script": "mvn clean package",
-  "jdk": "oraclejdk8",
-  "group": "stable",
-  "dist": "precise",
-  "os": "linux"
-}
+language: java
+script: mvn clean package
+jdk: oraclejdk8
+group: stable
+dist: precise
+os: linux
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report
