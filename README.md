@@ -1,8 +1,7 @@
 # LiveLib crawler
 
 [![Build Status](https://travis-ci.org/spoluyan/livelib-crawler.svg?branch=master)](https://travis-ci.org/spoluyan/livelib-crawler)
-[![Coverage Status](https://coveralls.io/repos/github/spoluyan/livelib-crawler/badge.svg?branch=master)](https://coveralls.io/github/spoluyan/livelib-crawler?branch=master)
-[![Issue Count](https://codeclimate.com/github/spoluyan/livelib-crawler/badges/issue_count.svg)](https://codeclimate.com/github/spoluyan/livelib-crawler)
+[![Coverage Status](https://coveralls.io/repos/github/spoluyan/livelib-crawler/badge.svg)](https://coveralls.io/github/spoluyan/livelib-crawler)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 
 ## Usage
