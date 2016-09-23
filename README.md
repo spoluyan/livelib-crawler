@@ -1,4 +1,4 @@
-# LiveLib crawler v1.1.1
+# LiveLib crawler v1.1.2
 
 [![Build Status](https://travis-ci.org/spoluyan/livelib-crawler.svg?branch=master)](https://travis-ci.org/spoluyan/livelib-crawler)
 [![Coverage Status](https://coveralls.io/repos/github/spoluyan/livelib-crawler/badge.svg)](https://coveralls.io/github/spoluyan/livelib-crawler)
@@ -12,14 +12,14 @@ Add to your `pom.xml`
 <repositories>
   <repository>
     <id>oss.sonatype.org</id>
-    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    <url>https://oss.sonatype.org/content/repositories/staging</url>
   </repository>
 </repositories>
 <dependencies>
   <dependency>
     <groupId>pw.spn</groupId>
     <artifactId>livelib-crawler</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.2</version>
   </dependency>
 </dependencies>
 ```
