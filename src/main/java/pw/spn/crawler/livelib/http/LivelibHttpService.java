@@ -11,15 +11,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request.Builder;
-import okhttp3.RequestBody;
 
 public class LivelibHttpService {
     private static final String BASE_URL = "https://www.livelib.ru/apiapp";
-    private static final MediaType MEDIA_TYPE_FORM = MediaType
-            .parse("application/x-www-form-urlencoded; charset=utf-8");
 
     private static final Logger logger = LoggerFactory.getLogger(LivelibHttpService.class);
 
@@ -43,19 +39,6 @@ public class LivelibHttpService {
         try {
             String jsonResponse = httpClient.newCall(new Builder().url(BASE_URL + url).build()).execute().body()
                     .string();
-            return Optional.ofNullable(mapToEntity(jsonResponse, entityType));
-        } catch (IOException e) {
-            logger.error("Error when making request to {}", BASE_URL + url);
-        }
-        return Optional.empty();
-    }
-
-    public <T> Optional<T> doPost(String url, String params, TypeReference<T> entityType) {
-        try {
-            String jsonResponse = httpClient
-                    .newCall(
-                            new Builder().url(BASE_URL + url).post(RequestBody.create(MEDIA_TYPE_FORM, params)).build())
-                    .execute().body().string();
             return Optional.ofNullable(mapToEntity(jsonResponse, entityType));
         } catch (IOException e) {
             logger.error("Error when making request to {}", BASE_URL + url);

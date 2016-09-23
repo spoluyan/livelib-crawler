@@ -9,7 +9,6 @@ import pw.spn.crawler.livelib.entity.deserializer.StringToFloatDeserializer;
 import pw.spn.crawler.livelib.entity.deserializer.StringToIntDeserializer;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-// TODO add fields ub_rating10, ub_rating, in_collection
 public class Book {
     private String id;
 

@@ -15,3 +15,4 @@ Main logic is implemented in `pw.spn.crawler.livelib.LivelibCrawler` class. Just
 * Get reading books by username
 * Get already read books by username
 * Get unread read books by username
+* Search for books
