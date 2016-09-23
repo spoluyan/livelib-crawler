@@ -1,6 +1,7 @@
 package pw.spn.crawler.livelib;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
@@ -132,5 +133,17 @@ public class LivelibCrawlerTest {
         assertThat(book.getNumberOfReviews(), is(not(0)));
         assertThat(book.getNumberOfSelections(), is(not(0)));
         assertThat(book.getNumberOfStories(), is(not(0)));
+    }
+
+    @Test
+    public void searchForBook_validData_booksReturned() {
+        // given
+        String query = "Java in";
+
+        // when
+        List<Book> result = testSubject.searchForBook(query);
+
+        // then
+        assertThat(result, is(not(empty())));
     }
 }
