@@ -1,4 +1,4 @@
-# LiveLib crawler v1.1.2
+# LiveLib crawler v1.2.2
 
 [![Build Status](https://travis-ci.org/spoluyan/livelib-crawler.svg?branch=master)](https://travis-ci.org/spoluyan/livelib-crawler)
 [![Coverage Status](https://coveralls.io/repos/github/spoluyan/livelib-crawler/badge.svg)](https://coveralls.io/github/spoluyan/livelib-crawler)

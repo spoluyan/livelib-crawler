@@ -9,6 +9,7 @@ import java.util.Optional;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 import pw.spn.crawler.livelib.entity.Book;
+import pw.spn.crawler.livelib.entity.BookStatus;
 import pw.spn.crawler.livelib.exception.LivelibCrawlerException;
 import pw.spn.crawler.livelib.http.LivelibHttpService;
 
@@ -27,6 +28,21 @@ public class LivelibCrawler {
 
     public LivelibCrawler(LivelibHttpService httpService) {
         this.httpService = httpService;
+    }
+
+    public List<Book> getByStatus(String userName, BookStatus status) {
+        switch (status) {
+        case WISH_TO_READ:
+            return getWish(userName);
+        case ALREADY_READ:
+            return getRead(userName);
+        case READING:
+            return getReading(userName);
+        case UNREAD:
+            return getUnread(userName);
+        default:
+            return Collections.emptyList();
+        }
     }
 
     public List<Book> getWish(String userName) {
