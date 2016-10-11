@@ -19,7 +19,7 @@ Add to your `pom.xml`
   <dependency>
     <groupId>pw.spn</groupId>
     <artifactId>livelib-crawler</artifactId>
-    <version>1.1.2</version>
+    <version>1.2.2</version>
   </dependency>
 </dependencies>
 ```
